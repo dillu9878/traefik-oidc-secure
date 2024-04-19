@@ -11,9 +11,9 @@ import (
 func TestServeHTTP(t *testing.T) {
 	// Setup
 	config := CreateConfig()
-	config.ProviderURL = "auth.bochslerfinance.com"
-	config.ClientID = "ProviderMiddleware"
-	config.ClientSecret = "uc0yKKpQsOqhggsG4eK7mDU3glT81chn"
+	config.ProviderURL = "http://auth.fracty.in/application/o/fracty-admin/"
+	config.ClientID = "CYrfMfD4lggR1sWenXGPm5pWxbQij1dxOiLds0GJ"
+	config.ClientSecret = "8Pe1zhlhLWmPB2aLcB6jJ5rrkUqhzcMKmEyE7IYz5AM51swuDbkkKwz5xa7UDPp0vNhJUtWyVCa25OSvqMpwfpgnXU4o5tcB6ePD0NIBTVYsh2QSYWRpKCNhr7zrVG4M"
 
 	// Create a new instance of our middleware
 	ProviderMiddleware, err := New(context.TODO(), http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
@@ -24,7 +24,7 @@ func TestServeHTTP(t *testing.T) {
 	}
 
 	fmt.Printf("%+v\n", ProviderMiddleware)
-	req, err := http.NewRequest("GET", "http://guidelines.bochslerfinance.com/", nil)
+	req, err := http.NewRequest("GET", "https://admin.fracty.in/", nil)
 	if err != nil {
 		t.Fatal("Expected no error while creating http request, got:", err)
 	}

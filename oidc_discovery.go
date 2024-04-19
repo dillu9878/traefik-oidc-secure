@@ -154,21 +154,3 @@ func GetOIDCDiscovery(providerURL string) (*OIDCDiscovery, error) {
 	}
 	return &document, nil
 }
-
-// func main() {
-// 	// Replace "https://your-openid-provider" with the actual URL of your OpenID provider
-// 	providerURL := "https://your-openid-provider"
-
-// 	// Call the GetOIDCDiscovery function to retrieve OIDC discovery endpoints
-// 	discovery, err := GetOIDCDiscovery(providerURL)
-// 	if err != nil {
-// 		fmt.Println("Error:", err)
-// 		return
-// 	}
-
-// 	// Print the discovered OIDC endpoints
-// 	fmt.Printf("Issuer: %s\n", discovery.Issuer)
-// 	fmt.Printf("Authorization Endpoint: %s\n", discovery.AuthorizationEndpoint)
-// 	fmt.Printf("Token Endpoint: %s\n", discovery.TokenEndpoint)
-// 	fmt.Printf("JWKS URI: %s\n", discovery.JWKSURI)
-// }

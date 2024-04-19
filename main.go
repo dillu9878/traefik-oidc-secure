@@ -79,7 +79,7 @@ func (k *ProviderAuth) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 		http.SetCookie(rw, &http.Cookie{
 			Name:     "Authorization",
 			Value:    "Bearer " + token,
-			Secure:   false, //Insecure true
+			Secure:   true, //Insecure true
 			HttpOnly: true,
 			Path:     "/",
 			SameSite: http.SameSiteStrictMode,

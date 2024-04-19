@@ -22,7 +22,7 @@ type Config struct {
 	ProviderURLEnv   string `json:"url_env"`
 	ClientIDEnv      string `json:"client_id_env"`
 	ClientSecretEnv  string `json:"client_secret_env"`
-	Insecure         bool   `json:"insecure"`
+	// Insecure         bool   `json:"insecure"`
 }
 
 type ProviderAuth struct {
@@ -33,7 +33,7 @@ type ProviderAuth struct {
 	ClientSecret   string
 	UserClaimName  string
 	UserHeaderName string
-	Insecure       bool
+	// Insecure       bool
 }
 
 type ProviderTokenResponse struct {
@@ -172,6 +172,6 @@ func New(uctx context.Context, next http.Handler, config *Config, name string) (
 		ClientSecret:   config.ClientSecret,
 		UserClaimName:  userClaimName,
 		UserHeaderName: userHeaderName,
-		Insecure:       config.Insecure,
+		// Insecure:       config.Insecure,
 	}, nil
 }

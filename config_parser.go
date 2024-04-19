@@ -53,7 +53,7 @@ func log(format string, a ...interface{}) {
 	// Get the current date and time, set format
 	currentTime := time.Now().Format("2006-01-02 15:04:05")
 	// Write the formatted log line
-	os.Stdout.WriteString(currentTime + " [traefik-oidc-rp] " + fmt.Sprintf(format, a...) + "\n")
+	os.Stdout.WriteString(currentTime + " [traefik-oidc-secure] " + fmt.Sprintf(format, a...) + "\n")
 }
 
 func CreateConfig() *Config {
